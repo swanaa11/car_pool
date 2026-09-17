@@ -4,17 +4,24 @@ import { SearchForm } from "@/components/SearchForm";
 import { createClient } from "@/lib/supabase/server";
 import { RideCard } from "@/components/RideCard";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const dict = getDict();
-  const supabase = createClient();
-  // fetch upcoming rides for social proof (public)
-  const { data: rides } = await supabase
-    .from("rides")
-    .select("*, driver:profiles!rides_driver_id_fkey(first_name,last_name,avatar_url,rating_avg,verification_badges)")
-    .eq("status","SCHEDULED")
-    .gte("departure_at", new Date().toISOString())
-    .order("departure_at", { ascending: true })
-    .limit(6);
+  let rides: any[] | null = null;
+  try {
+    const supabase = createClient();
+    const { data } = await supabase
+      .from("rides")
+      .select("*, driver:profiles!rides_driver_id_fkey(first_name,last_name,avatar_url,rating_avg,verification_badges)")
+      .eq("status","SCHEDULED")
+      .gte("departure_at", new Date().toISOString())
+      .order("departure_at", { ascending: true })
+      .limit(6);
+    rides = data;
+  } catch {
+    rides = [];
+  }
 
   return (
     <div>
