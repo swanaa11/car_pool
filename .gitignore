@@ -70,3 +70,4 @@ yarn-error.log*
 .cache
 Unselected\ files
 .git-credentials
+uploads/
