@@ -1,8 +1,8 @@
-# CarPull — Germany-focused Carpool Platform
+# Car Pool — Germany-focused Carpool Platform
 
-**CarPull** is a production-ready, Germany-focused carpool / ride-sharing platform for daily commutes, inter-city and intra-city rides. Inspired by BlaBlaCar but built with a privacy-first, GDPR-conscious, mobile-first architecture.
+**Car Pool** is a production-ready, Germany-focused carpool / ride-sharing platform for daily commutes, inter-city and intra-city rides. Inspired by BlaBlaCar but built with a privacy-first, GDPR-conscious, mobile-first architecture.
 
-> Brand: **CarPull** — the name, logo and palette are centralized in `packages/config` and `packages/ui` so rebranding is a single-file change.
+> Brand: **Car Pool** — the name, logo and palette are centralized in `packages/config` and `packages/ui` so rebranding is a single-file change.
 
 **Stack:** Next.js 14 (App Router) • Expo + React Native + Expo Router • Supabase (Postgres, Auth, Realtime, Storage) • TypeScript • Tailwind CSS • Zod • MapLibre • pnpm + Turborepo • Vercel • EAS Build
 

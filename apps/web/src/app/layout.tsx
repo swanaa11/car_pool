@@ -1,9 +1,11 @@
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { I18nProvider } from "@/components/I18nProvider";
 import { getLocale, getDict } from "@/lib/i18n";
 
-// Ensure Vercel prerender for /_not-found does not fail when cookies()/headers() are unavailable
+// Ensure dynamic so locale cookie is read per request
 export const dynamic = "force-dynamic";
 
 function getMetadataBase(): URL {
@@ -17,21 +19,35 @@ function getMetadataBase(): URL {
 }
 
 export const metadata = {
-  title: "CarPull — Gemeinsam fahren in Deutschland",
+  title: "Car Pool — Gemeinsam fahren in Deutschland",
   description: "Täglicher Pendelverkehr, Intercity & Inner-City Mitfahrgelegenheiten. Ohne Abo. Kostenbeteiligung statt Taxipreis.",
   metadataBase: getMetadataBase(),
-  openGraph: { title: "CarPull", description: "Gemeinsam fahren. Günstig. Nachhaltig.", type: "website" },
+  openGraph: { title: "Car Pool", description: "Gemeinsam fahren. Günstig. Nachhaltig.", type: "website" as const },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const locale = getLocale();
+  const locale = getLocale() as "de" | "en";
   const dict = getDict();
   return (
-    <html lang={locale}>
-      <body>
-        <Header locale={locale} dict={dict} />
-        <main className="min-h-[70vh]">{children}</main>
-        <Footer dict={dict} />
+    <html lang={locale} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `
+          try {
+            const t = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = t || (prefersDark ? 'dark' : 'light');
+            if (theme === 'dark') document.documentElement.classList.add('dark');
+          } catch {}
+        `}} />
+      </head>
+      <body className="min-h-screen flex flex-col">
+        <ThemeProvider>
+          <I18nProvider initialLocale={locale}>
+            <Header initialLocale={locale} initialDict={dict} />
+            <main className="flex-1 min-h-[70vh]">{children}</main>
+            <Footer />
+          </I18nProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

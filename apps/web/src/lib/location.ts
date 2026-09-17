@@ -17,7 +17,7 @@ export class OsmGeocodingProvider implements GeocodingProvider {
   async geocode(query: string): Promise<GeocodeResult[]> {
     try {
       const res = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&countrycodes=de&limit=5`, {
-        headers: { "User-Agent": "CarPull/1.0 (contact@carpull.de)" },
+        headers: { "User-Agent": "Car Pool/1.0 (contact@carpool.de)" },
         next: { revalidate: 3600 },
       });
       const data = await res.json();
@@ -27,7 +27,7 @@ export class OsmGeocodingProvider implements GeocodingProvider {
   async reverse(lat:number,lng:number): Promise<string> {
     try {
       const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`, {
-        headers: { "User-Agent": "CarPull/1.0 (contact@carpull.de)" },
+        headers: { "User-Agent": "Car Pool/1.0 (contact@carpool.de)" },
       });
       const data = await res.json();
       return data?.display_name ?? `${lat},${lng}`;

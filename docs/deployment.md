@@ -40,8 +40,8 @@
    Never put `SUPABASE_SERVICE_ROLE_KEY` in `NEXT_PUBLIC_*`.
 4. **Deploy:** Deploy → Vercel builds and assigns URL. Preview deployments on every PR automatically.
 5. **Verify:** Visit URL → landing loads, `/api/health` returns `{status:"ok"}`, search works (seeded rides if DB seeded).
-6. **Custom domain (optional):** Vercel → Settings → Domains → add `carpull.de` → update DNS.
-7. **Supabase Auth redirect:** In Supabase Dashboard → Auth → URL Configuration → add `https://your-vercel-url.vercel.app` and `https://carpull.de` to Redirect URLs + Site URL.
+6. **Custom domain (optional):** Vercel → Settings → Domains → add `carpool.de` → update DNS.
+7. **Supabase Auth redirect:** In Supabase Dashboard → Auth → URL Configuration → add `https://your-vercel-url.vercel.app` and `https://carpool.de` to Redirect URLs + Site URL.
 
 ## Environment handling
 - `.env.local` for local, Vercel env dashboard for cloud. `vercel env pull` syncs if needed.

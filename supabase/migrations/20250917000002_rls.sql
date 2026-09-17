@@ -1,4 +1,4 @@
--- CarPull — Row Level Security
+-- Car Pool — Row Level Security
 -- Principle: deny-by-default; explicit policies for each table.
 -- Never expose service_role to client.
 

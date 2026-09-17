@@ -16,5 +16,5 @@
 - [ ] **Tax note** — cost-sharing limits (§1 PBefG, ~0.30 €/km) — inform drivers not to profit
 - [ ] **Accessibility** — WCAG 2.1 AA (contrast, keyboard, screen reader) — Tailwind helps but manual audit needed
 - [ ] **App Store** — privacy labels, data safety forms, screenshots in German + English
-- [ ] **Support** — `support@carpull.de` monitored, response SLA defined
+- [ ] **Support** — `support@carpool.de` monitored, response SLA defined
 - [ ] **Incident plan** — how to handle data breach notification (72h to BfDI)

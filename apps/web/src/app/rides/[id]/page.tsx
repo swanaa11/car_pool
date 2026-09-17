@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { notFound } from "next/navigation";
 import { centsToEuro } from "@/lib/utils";
 import RideActions from "./actions";
+export const dynamic = "force-dynamic";
 
 export default async function RideDetail({ params }: { params:{id:string} }) {
   const supabase = createClient();

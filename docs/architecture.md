@@ -1,4 +1,4 @@
-# Architecture — CarPull
+# Architecture — Car Pool
 
 ## High-level
 ```

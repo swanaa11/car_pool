@@ -1,5 +1,5 @@
 export const brand = {
-  name: "CarPull",
+  name: "Car Pool",
   tagline: "Gemeinsam fahren. Günstig. Nachhaltig.",
   taglineEn: "Ride together. Affordable. Sustainable.",
   colors: {
@@ -10,8 +10,8 @@ export const brand = {
     text: "#0F172A",
     muted: "#64748B",
   },
-  supportEmail: "support@carpull.de",
-  url: "https://carpull.de",
+  supportEmail: "support@carpool.de",
+  url: "https://carpool.de",
 } as const;
 
 export const appConfig = {

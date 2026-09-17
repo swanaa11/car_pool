@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "CarPull",
+    "name": "Car Pool",
     "tagline": "Gemeinsam fahren. Günstig. Nachhaltig."
   },
   "nav": {
@@ -25,7 +25,11 @@
     "subtitle": "Täglicher Pendelverkehr, Intercity- und Inner-City-Mitfahrgelegenheiten in Deutschland. Ohne Abo. Ohne Mitgliedsgebühr.",
     "ctaSearch": "Fahrt finden",
     "ctaOffer": "Fahrt anbieten",
-    "trust": "Kostenbeteiligung statt Taxipreis • DSGVO-bewusst • Verifizierte Profile"
+    "trust": "Kostenbeteiligung statt Taxipreis • DSGVO-bewusst • Verifizierte Profile",
+    "statsRides": "Fahrten",
+    "statsCities": "Städte",
+    "statsCO2": "CO₂ gespart",
+    "badge": "#1 Mitfahr-Community DE"
   },
   "search": {
     "title": "Fahrt finden",
@@ -38,7 +42,8 @@
     "noResults": "Keine Fahrten gefunden. Versuche andere Filter.",
     "results": "{count} Fahrten gefunden",
     "verifiedOnly": "Nur verifizierte Fahrer",
-    "maxPrice": "Max. Beteiligung"
+    "maxPrice": "Max. Beteiligung",
+    "popular": "Beliebte Strecken"
   },
   "ride": {
     "create": "Fahrt erstellen",
@@ -65,7 +70,9 @@
     "detail": "Fahrtdetails",
     "requestSeat": "Platz anfragen",
     "seatsAvailable": "{n} Plätze frei",
-    "perPerson": "pro Person"
+    "perPerson": "pro Person",
+    "upcoming": "Aktuelle Fahrten",
+    "viewAll": "Alle ansehen"
   },
   "booking": {
     "requested": "Angefragt",
@@ -132,22 +139,61 @@
     "search": "Suchen",
     "filter": "Filtern",
     "back": "Zurück",
-    "next": "Weiter"
+    "next": "Weiter",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "toggleTheme": "Design wechseln"
   },
   "footer": {
     "privacy": "Datenschutz",
     "terms": "AGB",
     "imprint": "Impressum",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "tagline": "Kostenbeteiligung statt Taxipreis • DSGVO-bewusst • Verifizierte Profile",
+    "madeWith": "Mit ♥ in Deutschland gebaut"
   },
   "safety": {
     "title": "Sicherheit & Vertrauen",
     "content": "Fahre nur mit verifizierten Profilen, teile keine sensiblen Daten öffentlich und nutze den In-App-Chat."
   },
   "howItWorks": {
-    "title": "So funktioniert CarPull",
+    "title": "So funktioniert Car Pool",
     "step1": "Fahrt suchen oder anbieten",
     "step2": "Platz anfragen & bestätigen",
-    "step3": "Gemeinsam fahren & bewerten"
+    "step3": "Gemeinsam fahren & bewerten",
+    "desc1": "Wähle Strecke, Datum und Plätze.",
+    "desc2": "Fahrer bestätigt — Chat & Benachrichtigung.",
+    "desc3": "Fahrt genießen, danach bewerten."
+  },
+  "home": {
+    "howItWorks": "So funktioniert’s",
+    "step1Title": "Suchen",
+    "step2Title": "Buchen",
+    "step3Title": "Fahren",
+    "trustVerified": "Verifizierte Profile",
+    "trustVerifiedDesc": "E-Mail & Telefon-Verifikation, Bewertungen.",
+    "trustGDPR": "DSGVO-bewusst",
+    "trustGDPRDesc": "Datenminimierung, Löschung & Export.",
+    "trustFair": "Faire Kostenbeteiligung",
+    "trustFairDesc": "Kein Abo, kein Taxipreis — transparent."
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Kostet Car Pool etwas?",
+    "a1": "Nein. Kein Abo, keine Mitgliedsgebühr. Nur die vom Fahrer angegebene Kostenbeteiligung pro Mitfahrt.",
+    "q2": "Wie funktioniert die Bezahlung?",
+    "a2": "Derzeit privat/Bar vor Ort. Online-Zahlung ist als zukünftige Erweiterung architektonisch vorgesehen.",
+    "q3": "Kann ich pendeln (Mo–Fr)?",
+    "a3": "Ja — erstelle eine Fahrt und nutze die wiederkehrende Option oder lege mehrere Termine an.",
+    "q4": "Ist meine Adresse öffentlich?",
+    "a4": "Nein. Es wird nur der ungefähre Ort (z. B. Stadtteil/Bahnhof) angezeigt, keine exakte Hausadresse.",
+    "q5": "Deutsch oder Englisch?",
+    "a5": "Beides. Sprache umschalten oben rechts — Standard DE für deutsche Browser."
+  },
+  "about": {
+    "title": "Über Car Pool",
+    "p1": "Car Pool ist eine in Deutschland gebaute Mitfahr-Plattform für den Alltag — Pendeln, Intercity, Inner-City. Fokus: Vertrauen, Einfachheit, Datenschutz, mobile-first. Gebaut mit Next.js, Supabase, Expo — hostbar auf Vercel & EAS.",
+    "note": "Branding ist zentralisiert — Name, Farben, Logo in packages/config & packages/ui. Einfach austauschbar.",
+    "subtitle": "Gemeinsam fahren. Günstig. Nachhaltig."
   }
 }

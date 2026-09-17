@@ -1,12 +1,13 @@
+import { getDict } from "@/lib/i18n";
+export const dynamic = "force-dynamic";
 export default function Page(){
+  const dict = getDict();
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
-      <h1 className="text-3xl font-black tracking-tight">Sicherheit & Vertrauen · Safety</h1>
-      <div className="mt-6 grid gap-4 text-sm leading-relaxed">
-        <div className="rounded-2xl border border-slate-200 bg-white p-5"><div className="font-semibold">Verifizierung</div><p className="text-slate-600">E-Mail-Verifikation Pflicht, Telefon-Verifikation optional. Profile zeigen Badges und Bewertungen.</p></div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5"><div className="font-semibold">Chat & Privatsphäre</div><p className="text-slate-600">Nutze den In-App-Chat. Teile keine sensiblen Daten öffentlich. Adresse wird nicht exakt angezeigt — nur ungefähre Gebiete.</p></div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5"><div className="font-semibold">Melden & Blockieren</div><p className="text-slate-600">Du kannst Nutzer & Fahrten melden und Nutzer blockieren. Moderatoren prüfen Meldungen im Admin-Bereich.</p></div>
-        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-amber-900"><div className="font-semibold">Notfall</div><p>Im Notfall wähle 112. CarPull hat eine Notfallkontakt-Architektur (zukünftig: SOS-Button, Standortfreigabe).</p></div>
+    <div className="mx-auto max-w-3xl px-4 py-10 sm:py-14 animate-fadeIn">
+      <h1 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">{dict.safety?.title}</h1>
+      <p className="mt-4 text-slate-600 dark:text-slate-300 leading-relaxed">{dict.safety?.content}</p>
+      <div className="mt-6 rounded-2xl border border-teal-200 dark:border-teal-900 bg-teal-50 dark:bg-teal-950 p-5 text-sm text-teal-900 dark:text-teal-100">
+        {dict.hero?.trust ?? "Kostenbeteiligung statt Taxipreis • DSGVO-bewusst • Verifizierte Profile"}
       </div>
     </div>
   );

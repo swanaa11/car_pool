@@ -1,4 +1,4 @@
--- CarPull — Business logic functions (transactional, secure)
+-- Car Pool — Business logic functions (transactional, secure)
 
 -- Auto-create profile on signup
 create or replace function public.handle_new_user() returns trigger language plpgsql security definer set search_path = public as $$

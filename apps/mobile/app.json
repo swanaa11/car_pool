@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "CarPull",
-    "slug": "carpull",
+    "name": "Car Pool",
+    "slug": "car-pool",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "carpull",
-    "userInterfaceStyle": "light",
+    "scheme": "carpool",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -17,9 +17,9 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "de.carpull.app",
+      "bundleIdentifier": "de.carpool.app",
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "CarPull ben\u00f6tigt deinen Standort, um Abhol- und Zielorte zu finden."
+        "NSLocationWhenInUseUsageDescription": "Car Pool benötigt deinen Standort, um Abhol- und Zielorte zu finden."
       }
     },
     "android": {
@@ -27,7 +27,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0F766E"
       },
-      "package": "de.carpull.app",
+      "package": "de.carpool.app",
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION",
@@ -58,7 +58,7 @@
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow CarPull to use your location."
+          "locationAlwaysAndWhenInUsePermission": "Allow Car Pool to use your location."
         }
       ]
     ],

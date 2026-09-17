@@ -2,7 +2,7 @@
 
 ## Same codebase for Android + iOS — how it works
 - **One React Native codebase** in `apps/mobile/` using **Expo** (managed workflow) + **Expo Router** (file-based routing, similar to Next.js).
-- `app.json` defines both `ios.bundleIdentifier` (`de.carpull.app`) and `android.package` (`de.carpull.app`) — same JS bundle runs on both.
+- `app.json` defines both `ios.bundleIdentifier` (`de.carpool.app`) and `android.package` (`de.carpool.app`) — same JS bundle runs on both.
 - Platform differences are handled by Expo's cross-platform APIs (`expo-location`, `expo-notifications`, etc.) + `Platform.OS` checks where needed (e.g., `KeyboardAvoidingView` behavior).
 - Assets (`icon.png`, `splash.png`, `adaptive-icon.png`) are shared; iOS/Android generate native projects at build time via `npx expo prebuild` (managed by EAS).
 - Push notifications via `expo-notifications` (same API, different push services underneath).
@@ -46,7 +46,7 @@ Play Console requirements: app name, icons, screenshots, privacy policy URL, con
 ## iOS — TestFlight / App Store
 Requirements:
 - Apple Developer Program membership ($99/year)
-- Bundle Identifier `de.carpull.app` registered in https://developer.apple.com
+- Bundle Identifier `de.carpool.app` registered in https://developer.apple.com
 - Certificates & provisioning profiles — EAS handles automatically (`eas credentials`)
 ```bash
 eas build --platform ios --profile preview   # for internal testing
@@ -70,4 +70,4 @@ Placeholders in `apps/mobile/assets/` — replace before production:
 - `favicon.png` 48×48
 
 ## Deep linking
-Scheme `carpull://` configured in `app.json`. Use `expo-linking` to handle `carpull://ride/123` etc.
+Scheme `carpool://` configured in `app.json`. Use `expo-linking` to handle `carpool://ride/123` etc.

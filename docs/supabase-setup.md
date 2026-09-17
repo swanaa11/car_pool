@@ -1,7 +1,7 @@
 # Supabase Setup — Step-by-Step
 
 ## 1. Create project
-1. Go to https://supabase.com → New Project → name `carpull`, region `eu-central-1` (Frankfurt, GDPR-friendly), set DB password.
+1. Go to https://supabase.com → New Project → name `carpool`, region `eu-central-1` (Frankfurt, GDPR-friendly), set DB password.
 2. Wait for provisioning (~2 min).
 
 ## 2. Get keys

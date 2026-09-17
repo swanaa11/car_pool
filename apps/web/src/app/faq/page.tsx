@@ -1,19 +1,22 @@
+import { getDict } from "@/lib/i18n";
+export const dynamic = "force-dynamic";
 export default function Page(){
-  const faqs=[
-    {q:"Kostet CarPull etwas?",a:"Nein. Kein Abo, keine Mitgliedsgebühr. Nur die vom Fahrer angegebene Kostenbeteiligung pro Mitfahrt."},
-    {q:"Wie funktioniert die Bezahlung?",a:"Derzeit privat/Bar vor Ort. Online-Zahlung ist als zukünftige Erweiterung architektonisch vorgesehen."},
-    {q:"Kann ich pendeln (Mo–Fr)?",a:"Ja — erstelle eine Fahrt und nutze die wiederkehrende Option oder lege mehrere Termine an."},
-    {q:"Ist meine Adresse öffentlich?",a:"Nein. Es wird nur der ungefähre Ort (z. B. Stadtteil/Bahnhof) angezeigt, keine exakte Hausadresse."},
-    {q:"Deutsch oder Englisch?",a:"Beides. Sprache umschalten oben rechts — Standard DE für deutsche Browser."},
+  const dict = getDict();
+  const faqs = [
+    { q: dict.faq?.q1, a: dict.faq?.a1 },
+    { q: dict.faq?.q2, a: dict.faq?.a2 },
+    { q: dict.faq?.q3, a: dict.faq?.a3 },
+    { q: dict.faq?.q4, a: dict.faq?.a4 },
+    { q: dict.faq?.q5, a: dict.faq?.a5 },
   ];
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
-      <h1 className="text-3xl font-black tracking-tight">FAQ</h1>
+    <div className="mx-auto max-w-3xl px-4 py-10 sm:py-14 animate-fadeIn">
+      <h1 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">{dict.faq?.title ?? "FAQ"}</h1>
       <div className="mt-6 grid gap-3">
-        {faqs.map(f=>(
-          <details key={f.q} className="rounded-2xl border border-slate-200 bg-white p-5 group">
-            <summary className="font-semibold cursor-pointer list-none flex justify-between items-center">{f.q}<span className="text-slate-400 group-open:rotate-180">⌄</span></summary>
-            <p className="mt-2 text-sm text-slate-600 leading-relaxed">{f.a}</p>
+        {faqs.map((f,i) => (
+          <details key={i} className="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 shadow-sm card-hover">
+            <summary className="font-semibold cursor-pointer list-none flex justify-between items-center text-slate-900 dark:text-white">{f.q}<span className="text-slate-400 group-open:rotate-180 transition-transform">⌄</span></summary>
+            <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{f.a}</p>
           </details>
         ))}
       </div>

@@ -1,4 +1,4 @@
-# Security — CarPull
+# Security — Car Pool
 
 ## Auth
 - Supabase Auth (JWT, httpOnly cookies via `@supabase/ssr`).

@@ -1,1 +1,1 @@
-export async function GET(){ return Response.json({ status:"ok", time: new Date().toISOString(), app:"CarPull" }); }
+export async function GET(){ return Response.json({ status:"ok", time: new Date().toISOString(), app:"Car Pool" }); }

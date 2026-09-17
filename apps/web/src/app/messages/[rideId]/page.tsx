@@ -2,7 +2,6 @@
 import { useEffect, useState, useRef } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useParams } from "next/navigation";
-
 export default function ChatPage(){
   const { rideId } = useParams() as { rideId: string };
   const [messages, setMessages] = useState<any[]>([]);

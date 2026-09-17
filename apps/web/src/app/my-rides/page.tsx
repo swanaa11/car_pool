@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import { RideCard } from "@/components/RideCard";
+export const dynamic = "force-dynamic";
 
 export default async function MyRides() {
   const supabase = createClient();

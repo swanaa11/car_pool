@@ -1,4 +1,4 @@
--- CarPull — Initial schema (Godordentlich für Germany, GDPR-bewusst)
+-- Car Pool — Initial schema (Godordentlich für Germany, GDPR-bewusst)
 -- Enables: profiles, vehicles, rides, recurring_rides, bookings, messages, notifications, ratings, reports, blocks...
 -- Uses UUIDs, RLS, indexes, constraints, audit.
 

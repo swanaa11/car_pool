@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "CarPull",
+    "name": "Car Pool",
     "tagline": "Ride together. Affordable. Sustainable."
   },
   "nav": {
@@ -25,7 +25,11 @@
     "subtitle": "Daily commutes, inter-city and intra-city carpooling across Germany. No subscription. No membership fee.",
     "ctaSearch": "Find a ride",
     "ctaOffer": "Offer a ride",
-    "trust": "Cost-sharing, not a taxi • GDPR-conscious • Verified profiles"
+    "trust": "Cost-sharing, not a taxi • GDPR-conscious • Verified profiles",
+    "statsRides": "Rides",
+    "statsCities": "Cities",
+    "statsCO2": "CO₂ saved",
+    "badge": "#1 Carpool Community DE"
   },
   "search": {
     "title": "Find a ride",
@@ -38,7 +42,8 @@
     "noResults": "No rides found. Try different filters.",
     "results": "{count} rides found",
     "verifiedOnly": "Verified drivers only",
-    "maxPrice": "Max contribution"
+    "maxPrice": "Max contribution",
+    "popular": "Popular routes"
   },
   "ride": {
     "create": "Create ride",
@@ -65,7 +70,9 @@
     "detail": "Ride details",
     "requestSeat": "Request seat",
     "seatsAvailable": "{n} seats left",
-    "perPerson": "per person"
+    "perPerson": "per person",
+    "upcoming": "Upcoming rides",
+    "viewAll": "View all"
   },
   "booking": {
     "requested": "Requested",
@@ -132,22 +139,61 @@
     "search": "Search",
     "filter": "Filter",
     "back": "Back",
-    "next": "Next"
+    "next": "Next",
+    "light": "Light",
+    "dark": "Dark",
+    "toggleTheme": "Toggle theme"
   },
   "footer": {
     "privacy": "Privacy",
     "terms": "Terms",
     "imprint": "Imprint",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "tagline": "Cost-sharing, not a taxi • GDPR-conscious • Verified profiles",
+    "madeWith": "Made with ♥ in Germany"
   },
   "safety": {
     "title": "Safety & Trust",
     "content": "Ride only with verified profiles, avoid sharing sensitive data publicly and use in-app chat."
   },
   "howItWorks": {
-    "title": "How CarPull works",
+    "title": "How Car Pool works",
     "step1": "Search or offer a ride",
     "step2": "Request & confirm a seat",
-    "step3": "Ride together & rate"
+    "step3": "Ride together & rate",
+    "desc1": "Pick route, date and seats.",
+    "desc2": "Driver confirms — chat & notification.",
+    "desc3": "Enjoy the ride, then rate."
+  },
+  "home": {
+    "howItWorks": "How it works",
+    "step1Title": "Search",
+    "step2Title": "Book",
+    "step3Title": "Ride",
+    "trustVerified": "Verified profiles",
+    "trustVerifiedDesc": "Email & phone verification, ratings.",
+    "trustGDPR": "GDPR-conscious",
+    "trustGDPRDesc": "Data minimization, deletion & export.",
+    "trustFair": "Fair cost-sharing",
+    "trustFairDesc": "No subscription, no taxi fare — transparent."
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Does Car Pool cost anything?",
+    "a1": "No. No subscription, no membership fee. Only the cost contribution specified by the driver per ride.",
+    "q2": "How does payment work?",
+    "a2": "Currently private/cash on the spot. Online payment is architecturally planned as a future extension.",
+    "q3": "Can I commute (Mon–Fri)?",
+    "a3": "Yes — create a ride and use the recurring option or create multiple dates.",
+    "q4": "Is my address public?",
+    "a4": "No. Only the approximate location (e.g. neighbourhood/station) is shown, not the exact home address.",
+    "q5": "German or English?",
+    "a5": "Both. Switch language top-right — default DE for German browsers."
+  },
+  "about": {
+    "title": "About Car Pool",
+    "p1": "Car Pool is a Germany-built carpool platform for everyday life — commuting, intercity, inner-city. Focus: trust, simplicity, privacy, mobile-first. Built with Next.js, Supabase, Expo — hostable on Vercel & EAS.",
+    "note": "Branding is centralized — name, colors, logo in packages/config & packages/ui. Easily replaceable.",
+    "subtitle": "Ride together. Affordable. Sustainable."
   }
 }
