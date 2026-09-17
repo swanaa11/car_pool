@@ -1,0 +1,1 @@
+export default function OG(){ return new Response("CarPull", { headers:{ "content-type":"text/plain" } }); }

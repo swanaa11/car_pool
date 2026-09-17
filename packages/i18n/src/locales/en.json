@@ -1,0 +1,153 @@
+{
+  "brand": {
+    "name": "CarPull",
+    "tagline": "Ride together. Affordable. Sustainable."
+  },
+  "nav": {
+    "home": "Home",
+    "search": "Find a ride",
+    "offer": "Offer a ride",
+    "myRides": "My rides",
+    "messages": "Messages",
+    "profile": "Profile",
+    "admin": "Admin",
+    "login": "Log in",
+    "register": "Sign up",
+    "logout": "Log out",
+    "howItWorks": "How it works",
+    "safety": "Safety",
+    "faq": "FAQ",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Share your ride. Share the cost. Protect the planet.",
+    "subtitle": "Daily commutes, inter-city and intra-city carpooling across Germany. No subscription. No membership fee.",
+    "ctaSearch": "Find a ride",
+    "ctaOffer": "Offer a ride",
+    "trust": "Cost-sharing, not a taxi • GDPR-conscious • Verified profiles"
+  },
+  "search": {
+    "title": "Find a ride",
+    "from": "From",
+    "to": "To",
+    "date": "Date",
+    "seats": "Seats",
+    "searchBtn": "Search",
+    "filters": "Filters",
+    "noResults": "No rides found. Try different filters.",
+    "results": "{count} rides found",
+    "verifiedOnly": "Verified drivers only",
+    "maxPrice": "Max contribution"
+  },
+  "ride": {
+    "create": "Create ride",
+    "origin": "Origin",
+    "destination": "Destination",
+    "pickup": "Pickup",
+    "dropoff": "Drop-off",
+    "departure": "Departure",
+    "seats": "Available seats",
+    "contribution": "Contribution",
+    "notes": "Notes",
+    "preferences": "Preferences",
+    "smoking": "Smoking allowed",
+    "pets": "Pets allowed",
+    "luggage": "Large luggage",
+    "conversation": "Conversation",
+    "quiet": "Quiet",
+    "chatty": "Chatty",
+    "whatever": "Whatever",
+    "recurring": "Recurring ride",
+    "weekdays": "Weekdays",
+    "vehicle": "Vehicle",
+    "createBtn": "Publish ride",
+    "detail": "Ride details",
+    "requestSeat": "Request seat",
+    "seatsAvailable": "{n} seats left",
+    "perPerson": "per person"
+  },
+  "booking": {
+    "requested": "Requested",
+    "accepted": "Accepted",
+    "rejected": "Rejected",
+    "cancelled": "Cancelled",
+    "completed": "Completed",
+    "request": "Request",
+    "accept": "Accept",
+    "reject": "Reject",
+    "cancel": "Cancel",
+    "complete": "Mark as completed"
+  },
+  "chat": {
+    "title": "Messages",
+    "placeholder": "Write a message…",
+    "send": "Send",
+    "empty": "No messages yet"
+  },
+  "profile": {
+    "title": "Profile",
+    "edit": "Edit profile",
+    "city": "City",
+    "bio": "About",
+    "languages": "Languages",
+    "vehicle": "Vehicle",
+    "rating": "Rating",
+    "rides": "Rides",
+    "verification": "Verification"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "loginTitle": "Welcome back",
+    "registerTitle": "Create account",
+    "forgot": "Forgot password?",
+    "magicLink": "Send magic link",
+    "google": "Continue with Google",
+    "noAccount": "No account?",
+    "hasAccount": "Already have an account?",
+    "logoutAll": "Log out everywhere"
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "users": "Users",
+    "rides": "Rides",
+    "bookings": "Bookings",
+    "reports": "Reports",
+    "suspend": "Suspend",
+    "ban": "Ban",
+    "resolve": "Mark resolved"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading…",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "search": "Search",
+    "filter": "Filter",
+    "back": "Back",
+    "next": "Next"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "imprint": "Imprint",
+    "cookies": "Cookies"
+  },
+  "safety": {
+    "title": "Safety & Trust",
+    "content": "Ride only with verified profiles, avoid sharing sensitive data publicly and use in-app chat."
+  },
+  "howItWorks": {
+    "title": "How CarPull works",
+    "step1": "Search or offer a ride",
+    "step2": "Request & confirm a seat",
+    "step3": "Ride together & rate"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "brand": {
+    "name": "CarPull",
+    "tagline": "Gemeinsam fahren. Günstig. Nachhaltig."
+  },
+  "nav": {
+    "home": "Start",
+    "search": "Fahrt finden",
+    "offer": "Fahrt anbieten",
+    "myRides": "Meine Fahrten",
+    "messages": "Nachrichten",
+    "profile": "Profil",
+    "admin": "Admin",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "howItWorks": "So funktioniert's",
+    "safety": "Sicherheit",
+    "faq": "FAQ",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Teile deine Fahrt. Spare Kosten. Schone die Umwelt.",
+    "subtitle": "Täglicher Pendelverkehr, Intercity- und Inner-City-Mitfahrgelegenheiten in Deutschland. Ohne Abo. Ohne Mitgliedsgebühr.",
+    "ctaSearch": "Fahrt finden",
+    "ctaOffer": "Fahrt anbieten",
+    "trust": "Kostenbeteiligung statt Taxipreis • DSGVO-bewusst • Verifizierte Profile"
+  },
+  "search": {
+    "title": "Fahrt finden",
+    "from": "Von",
+    "to": "Nach",
+    "date": "Datum",
+    "seats": "Plätze",
+    "searchBtn": "Suchen",
+    "filters": "Filter",
+    "noResults": "Keine Fahrten gefunden. Versuche andere Filter.",
+    "results": "{count} Fahrten gefunden",
+    "verifiedOnly": "Nur verifizierte Fahrer",
+    "maxPrice": "Max. Beteiligung"
+  },
+  "ride": {
+    "create": "Fahrt erstellen",
+    "origin": "Startort",
+    "destination": "Zielort",
+    "pickup": "Treffpunkt",
+    "dropoff": "Ziel-Treffpunkt",
+    "departure": "Abfahrt",
+    "seats": "Freie Plätze",
+    "contribution": "Kostenbeteiligung",
+    "notes": "Hinweise",
+    "preferences": "Präferenzen",
+    "smoking": "Rauchen erlaubt",
+    "pets": "Haustiere erlaubt",
+    "luggage": "Großes Gepäck",
+    "conversation": "Gespräch",
+    "quiet": "Ruhig",
+    "chatty": "Gesprächig",
+    "whatever": "Egal",
+    "recurring": "Regelmäßige Fahrt",
+    "weekdays": "Wochentage",
+    "vehicle": "Fahrzeug",
+    "createBtn": "Fahrt veröffentlichen",
+    "detail": "Fahrtdetails",
+    "requestSeat": "Platz anfragen",
+    "seatsAvailable": "{n} Plätze frei",
+    "perPerson": "pro Person"
+  },
+  "booking": {
+    "requested": "Angefragt",
+    "accepted": "Bestätigt",
+    "rejected": "Abgelehnt",
+    "cancelled": "Storniert",
+    "completed": "Abgeschlossen",
+    "request": "Anfragen",
+    "accept": "Annehmen",
+    "reject": "Ablehnen",
+    "cancel": "Stornieren",
+    "complete": "Als abgeschlossen markieren"
+  },
+  "chat": {
+    "title": "Nachrichten",
+    "placeholder": "Nachricht schreiben…",
+    "send": "Senden",
+    "empty": "Noch keine Nachrichten"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Profil bearbeiten",
+    "city": "Stadt",
+    "bio": "Über mich",
+    "languages": "Sprachen",
+    "vehicle": "Fahrzeug",
+    "rating": "Bewertung",
+    "rides": "Fahrten",
+    "verification": "Verifizierung"
+  },
+  "auth": {
+    "email": "E-Mail",
+    "password": "Passwort",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "loginTitle": "Willkommen zurück",
+    "registerTitle": "Konto erstellen",
+    "forgot": "Passwort vergessen?",
+    "magicLink": "Magic Link senden",
+    "google": "Mit Google anmelden",
+    "noAccount": "Kein Konto?",
+    "hasAccount": "Schon registriert?",
+    "logoutAll": "Auf allen Geräten abmelden"
+  },
+  "admin": {
+    "title": "Admin-Dashboard",
+    "users": "Nutzer",
+    "rides": "Fahrten",
+    "bookings": "Buchungen",
+    "reports": "Meldungen",
+    "suspend": "Sperren",
+    "ban": "Bannen",
+    "resolve": "Als erledigt markieren"
+  },
+  "common": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "loading": "Lädt…",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "confirm": "Bestätigen",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "back": "Zurück",
+    "next": "Weiter"
+  },
+  "footer": {
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "imprint": "Impressum",
+    "cookies": "Cookies"
+  },
+  "safety": {
+    "title": "Sicherheit & Vertrauen",
+    "content": "Fahre nur mit verifizierten Profilen, teile keine sensiblen Daten öffentlich und nutze den In-App-Chat."
+  },
+  "howItWorks": {
+    "title": "So funktioniert CarPull",
+    "step1": "Fahrt suchen oder anbieten",
+    "step2": "Platz anfragen & bestätigen",
+    "step3": "Gemeinsam fahren & bewerten"
+  }
+}

@@ -1,0 +1,71 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# Build outputs
+dist
+build
+out
+coverage
+.turbo
+.next
+.expo
+.expo-shared
+.web
+*.tsbuildinfo
+
+# Supabase
+.supabase
+
+# Expo / EAS
+.eas
+
+# Caches
+.eslintcache
+.cache
+.parcel-cache
+.turbo
+.mypy_cache
+.pytest_cache
+.ruff_cache
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# pnpm
+.pnpm-store
+
+# Vercel
+.vercel
+
+# Misc workspace ignores (home directory caches in this sandbox)
+.npm-global
+.npm
+.local
+.config
+.cache
+Unselected\ files
