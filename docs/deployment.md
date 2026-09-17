@@ -5,9 +5,24 @@
 - GitHub repo pushed
 - Vercel account (free tier OK)
 
-## Steps
-1. **Connect repo:** Vercel Dashboard → Add New Project → Import `swanaa11/car_pull` → Framework Preset: Next.js → Root Directory: `apps/web`
-2. **Build settings:** Build Command `pnpm build` (or `pnpm --filter web build`), Output Directory `.next`, Install Command `pnpm install`
+## Steps — Correct Root Directory is critical for pnpm monorepo
+
+> **For this repository `vercel.json` is already configured for the repository root.** Choose **one** of the two setups — do not mix them:
+
+**Recommended (monorepo root, simplest):**
+1. **Connect repo:** Vercel → Add New Project → Import `swanaa11/car_pull` → Framework Preset: Next.js → **Root Directory: leave empty** (click Edit but keep it blank / `.`) → Vercel will use the root `vercel.json`:
+   - Build Command `pnpm --filter web build`
+   - Output Directory `apps/web/.next`
+   - Install Command `pnpm install`
+
+**Alternative (if you prefer per-app Root Directory):**
+- Set Root Directory → `apps/web` → then you **must** override in Vercel Project Settings → Build & Development Settings to:
+  - Build Command `pnpm build` (or `cd ../.. && pnpm --filter web build`)
+  - Output Directory `.next`
+  - Install Command `cd ../.. && pnpm install`
+- And delete or update the root `vercel.json` to `{"framework":"nextjs","regions":["fra1"]}`. Otherwise you’ll see `apps/web/.next was not found at /vercel/path0/apps/web/apps/web/.next` (double nesting).
+
+> **If you already deployed with Root Directory `apps/web` and got `apps/web/.next was not found at /vercel/path0/apps/web/apps/web/.next`:** Go to Vercel → Project → Settings → General → Root Directory → **Edit → clear the field (empty)** → Save → Redeploy. Or keep `apps/web` but change `vercel.json` outputDirectory to `.next` and buildCommand to `pnpm build`.
 3. **Env vars (Production + Preview):**
    ```
    NEXT_PUBLIC_SUPABASE_URL=https://<ref>.supabase.co

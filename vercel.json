@@ -3,6 +3,5 @@
   "buildCommand": "pnpm --filter web build",
   "installCommand": "pnpm install",
   "outputDirectory": "apps/web/.next",
-  "regions": ["fra1"],
-  "git": { "deployedAt": true }
+  "regions": ["fra1"]
 }
