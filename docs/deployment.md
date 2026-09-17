@@ -5,24 +5,29 @@
 - GitHub repo pushed
 - Vercel account (free tier OK)
 
-## Steps — Correct Root Directory is critical for pnpm monorepo
+## Steps — Use Root Directory `apps/web` (fixes "No Next.js version detected")
 
-> **For this repository `vercel.json` is already configured for the repository root.** Choose **one** of the two setups — do not mix them:
+> **This repository is a pnpm + Turborepo monorepo. Vercel must see `apps/web/package.json` to detect Next.js.** The root `vercel.json` is now configured for **Root Directory `apps/web`**.
 
-**Recommended (monorepo root, simplest):**
-1. **Connect repo:** Vercel → Add New Project → Import `swanaa11/car_pull` → Framework Preset: Next.js → **Root Directory: leave empty** (click Edit but keep it blank / `.`) → Vercel will use the root `vercel.json`:
-   - Build Command `pnpm --filter web build`
-   - Output Directory `apps/web/.next`
-   - Install Command `pnpm install`
+**Do this once:**
+1. **Connect repo:** Vercel → Add New Project → Import `swanaa11/car_pull` → Framework Preset: Next.js → **Root Directory: `apps/web`** (click Edit → type `apps/web`)
+2. Vercel will read the root `vercel.json`:
+   ```json
+   {
+     "framework": "nextjs",
+     "installCommand": "cd ../.. && pnpm install",
+     "buildCommand": "cd ../.. && pnpm --filter web build",
+     "outputDirectory": ".next",
+     "regions": ["fra1"]
+   }
+   ```
+   It installs from the repository root (`cd ../.. && pnpm install` handles the `pnpm-workspace.yaml`), then builds only `web` (`pnpm --filter web build`), and looks for `.next` inside `apps/web` (correct: `/vercel/path0/apps/web/.next`).
 
-**Alternative (if you prefer per-app Root Directory):**
-- Set Root Directory → `apps/web` → then you **must** override in Vercel Project Settings → Build & Development Settings to:
-  - Build Command `pnpm build` (or `cd ../.. && pnpm --filter web build`)
-  - Output Directory `.next`
-  - Install Command `cd ../.. && pnpm install`
-- And delete or update the root `vercel.json` to `{"framework":"nextjs","regions":["fra1"]}`. Otherwise you’ll see `apps/web/.next was not found at /vercel/path0/apps/web/apps/web/.next` (double nesting).
+**If you previously set Root Directory to empty and got `No Next.js version detected`:** That’s because the repository root `package.json` has no `next` — Vercel looks at `package.json` in the Root Directory to detect the framework. Set it to `apps/web` (where `next` lives) and redeploy.
 
-> **If you already deployed with Root Directory `apps/web` and got `apps/web/.next was not found at /vercel/path0/apps/web/apps/web/.next`:** Go to Vercel → Project → Settings → General → Root Directory → **Edit → clear the field (empty)** → Save → Redeploy. Or keep `apps/web` but change `vercel.json` outputDirectory to `.next` and buildCommand to `pnpm build`.
+**If you previously had `apps/web/.next was not found at /vercel/path0/apps/web/apps/web/.next`:** You had `outputDirectory: apps/web/.next` together with Root Directory `apps/web` (double nesting). The new `vercel.json` fixes this to `outputDirectory: .next` with `cd ../..` install/build.
+
+**Alternative (Root Directory empty):** Leave Root Directory empty and change `vercel.json` to `{"buildCommand":"pnpm --filter web build","outputDirectory":"apps/web/.next","installCommand":"pnpm install"}` — but then you must add `"next":"14.2.15"` to the root `package.json` devDependencies so Vercel detects Next.js, which is not recommended.
 3. **Env vars (Production + Preview):**
    ```
    NEXT_PUBLIC_SUPABASE_URL=https://<ref>.supabase.co
