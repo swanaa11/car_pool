@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import { useTheme } from "./ThemeProvider";
 import { useI18n } from "./I18nProvider";
+import { LogoMark, IconSun, IconMoon, IconMenu, IconClose } from "./icons";
 
 export function Header({ initialLocale, initialDict }: { initialLocale: "de" | "en"; initialDict: any }) {
   const { locale, dict, setLocale } = useI18n();
@@ -37,9 +38,11 @@ export function Header({ initialLocale, initialDict }: { initialLocale: "de" | "
       <div className="mx-auto max-w-6xl px-3 sm:px-4 h-[64px] flex items-center justify-between gap-2 sm:gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
-          <span className="inline-flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-600 to-cyan-600 text-white font-black text-lg shadow-lg shadow-teal-600/20 group-hover:shadow-teal-600/30 transition-all duration-300 group-hover:scale-105">C</span>
+          <span className="inline-flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-600 to-cyan-600 text-white shadow-lg shadow-teal-600/20 group-hover:shadow-teal-600/30 transition-all duration-300 group-hover:scale-105">
+            <LogoMark className="h-5 w-5 sm:h-[22px] sm:w-[22px]" />
+          </span>
           <span className="flex flex-col leading-none">
-            <span className="font-black text-[17px] sm:text-xl tracking-tight text-slate-900 dark:text-white">Car Pool</span>
+            <span className="font-display font-extrabold text-[19px] sm:text-[22px] tracking-tight text-slate-900 dark:text-white">Car Pool</span>
             <span className="hidden sm:block text-[11px] font-medium text-slate-500 dark:text-slate-400 tracking-wide">{dict.brand?.tagline ?? ""}</span>
           </span>
         </Link>
@@ -60,7 +63,7 @@ export function Header({ initialLocale, initialDict }: { initialLocale: "de" | "
             aria-label="Toggle theme"
             className="h-9 w-9 grid place-items-center rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all duration-200 shrink-0"
           >
-            <span className="text-[16px] leading-none">{theme === "dark" ? "☀️" : "🌙"}</span>
+            {theme === "dark" ? <IconSun className="h-[18px] w-[18px]" /> : <IconMoon className="h-[18px] w-[18px]" />}
           </button>
 
           {/* Lang switch */}
@@ -89,8 +92,8 @@ export function Header({ initialLocale, initialDict }: { initialLocale: "de" | "
           )}
 
           {/* Mobile menu toggle */}
-          <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden h-9 w-9 grid place-items-center rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
-            <span className="text-slate-700 dark:text-slate-200 text-lg leading-none">{mobileOpen ? "✕" : "☰"}</span>
+          <button onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu" className="lg:hidden h-9 w-9 grid place-items-center rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+            {mobileOpen ? <IconClose className="h-[18px] w-[18px] text-slate-700 dark:text-slate-200" /> : <IconMenu className="h-[18px] w-[18px] text-slate-700 dark:text-slate-200" />}
           </button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useI18n } from "./I18nProvider";
+import { LogoMark } from "./icons";
 
 export function Footer() {
   const { dict } = useI18n();
@@ -9,8 +10,8 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 font-black text-lg">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-teal-600 to-cyan-600 text-white">C</span>
+            <div className="flex items-center gap-2 font-display font-extrabold text-lg">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-teal-600 to-cyan-600 text-white"><LogoMark className="h-4 w-4" /></span>
               Car Pool
             </div>
             <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{dict.footer?.tagline ?? dict.brand?.tagline ?? ""}</p>
